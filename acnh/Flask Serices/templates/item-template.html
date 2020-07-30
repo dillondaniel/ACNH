@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{{url_for('static', filename='img.css')}}">
+<head>
+
+</head>
+<body>
+    <h2 class="h2">{{ item['name']['name-USen'] }}</h2>
+  <div class = "image_container">
+
+      <img class="img" src="{{ item['image_uri'] }}" />
+
+      <div id="attlist">
+      <p>Shadow Size (1-5): {{ item['shadow'] }}</p>
+      <p>Time Catchable (if any): {{ item['availability']['time'] }}</p>
+      <p>Price: {{ item['price'] }}</p>
+      <p>Rarity: {{ item['availability']['rarity'] }}</p>
+      <p>Catch Phrase: {{ item['catch-phrase'] }}</p>
+      <br>
+      </div>
+  </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+</head>
+
+<body>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type=text/javascript>
+    $(function() {
+      $('.dropbtn').bind('click', function(event) {
+        let dropdownId = event.target.getAttribute('for');
+        $('.dropdown-content').hide();
+        $('#'+dropdownId).show();
+        event.stopPropagation();
+      });
+      $(document).click(function(){
+        $('.dropdown-content').hide();
+      });
+    });
+
+  </script>
+
+  <div class="container">
+    <div class="dropdown">
+      <button for="myDropdown" class="dropbtn">Fish</button>
+      <div id="myDropdown" class="dropdown-content scroll">
+        {% for key, val in fishes.items() %}
+        <a href="{{ url_for('item', id=val['id'], type='fish') }}">{{ val['name']['name-USen'] }}</a>
+        {%endfor%}
+      </div>
+    </div>
+
+    <div class="dropdown2">
+      <button for="myDropdown2" class="dropbtn">Bugs</button>
+      <div id="myDropdown2" class="dropdown-content scroll">
+        {% for key, val in bugs.items() %}
+        <a href="{{ url_for('item', id=val['id'], type='bugs') }}">{{ val['name']['name-USen'] }}</a>
+        {%endfor%}
+      </div>
+    </div>
+
+    <div class="dropdown3">
+      <button for="myDropdown3" class="dropbtn">Sea Creatures</button>
+      <div id="myDropdown3" class="dropdown-content scroll">
+        {% for key, val in sea_creatures.items() %}
+        <a href="{{ url_for('item', id=val['id'], type='sea') }}">{{ val['name']['name-USen'] }}</a>
+        {%endfor%}
+      </div>
+    </div>
+  </div>
+
+  <div class="hello">
+
+    <h1>Welcome to my AC: New Horizons Encylopedia
+  </div>
+
+</body>
+
+</html>

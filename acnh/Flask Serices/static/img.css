@@ -1,0 +1,44 @@
+
+
+
+.h2 {
+  padding-top: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* .img {
+  border: .5px solid #ddd;
+  border-radius: 2px;
+  padding: 1px;
+  width: 100px;
+} */
+
+.image_container {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction:row;
+  justify-content: center;
+  border-style: none;
+}
+
+.img {
+  padding: 1px;
+  width: 30%;
+  margin: auto;
+  border-style: none;
+}
+
+#attlist {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  display:list-item;
+  list-style: none;
+  background-color: #7D7D7D;
+  text-align: center;
+}
